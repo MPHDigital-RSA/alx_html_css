@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+
+article {
+    flex: 2;
+    overflow-y: auto;
+    padding: 30px 50px 50px 0;
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+table {
+    border: 2px solid black;
+    padding: 10px;
+    display: inline-block;
+}
+
+table th,
+table td {
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.27);
+    margin-bottom: 10px;
+}
+
+img {
+    border: 2px solid black;
+    margin: 20px 0;
+}
