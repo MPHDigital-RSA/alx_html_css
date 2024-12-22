@@ -2,4 +2,4 @@ SmileSchool is a project for a website designed by ALX professionals for the ALX
 
 it teaches more about HTML and CSS.
 
-![image alt](smileschool.png)
+![image alt](smileschool.jpg)
