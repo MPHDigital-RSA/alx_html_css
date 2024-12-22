@@ -152,8 +152,6 @@ header {
     font-family: 'Yeseva One', sans-serif;
 }
 
-article {}
-
 header {
     border-bottom: 1px solid rgb(221, 221, 221);
     transition: border-bottom-color 1s ease;
@@ -169,8 +167,8 @@ aside {
 
 aside p {
     border: 1px solid #bbb;
-    background: #ddd;
-    color: black;
+    background: rgba(255, 0, 0, 0.404);
+    color: white;
 }
 
 footer a {
