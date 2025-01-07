@@ -182,6 +182,9 @@ nav a:hover:after {
     background-color: var(--orange);
 }
 
+nav a:hover {
+    color: var(--orange);
+}
 
 /* ------------hero section styling ---------------*/
 
