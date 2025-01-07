@@ -1,0 +1,165 @@
+:root {
+    --orange: #FF6565;
+    --white: #FFFFFF;
+    --black: #071629;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "source sans pro";
+}
+
+.wrapper {
+    max-width: 1040px;
+    /* the reason im using 1040px as my with instead of 1000px is because i added left and right padding of 20px each it cancels out back to 1000px */
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+@media (max-width:980px) {
+    .wrapper {
+        padding-inline: 50px;
+    }
+}
+
+button {
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    padding: 12px 20px;
+    transition: all 500ms ease-in-out;
+}
+
+button:hover {
+    background-color: #ff6565b7;
+    cursor: pointer;
+}
+
+/* header styling */
+
+header {
+    /* background-color: var(--black); */
+    padding-block: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.logo {
+    width: 161px;
+}
+
+header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 580px) {
+    .hamburger-menu {
+        display: unset;
+        position: absolute;
+        left: 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .wrapper {
+        justify-content: center;
+    }
+}
+
+
+header ul {
+    display: flex;
+    gap: 41px;
+    list-style-type: none;
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 500ms ease-in-out;
+}
+
+header a:hover {
+    color: var(--orange);
+}
+
+/* hero section styling */
+
+.hero {
+    background-image: url(images/headphones_hero_1.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: end;
+    padding-bottom: 100px;
+}
+
+.hero-content {
+    max-width: 767px;
+    margin-inline: auto;
+    text-align: center;
+    color: var(--white);
+    padding-inline: 50px;
+}
+
+.hero button {
+    margin-top: 40px;
+    margin-bottom: 65px;
+}
+
+@media (max-width: 580px) {
+
+    .hero {
+        padding-bottom: 50px;
+    }
+
+    .hero button {
+        margin-top: 20px;
+        margin-bottom: 45px;
+    }
+
+    .hero-content {
+        padding-inline: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding-inline: 20px;
+    }
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hero .subheading {
+    font-weight: bold;
+}
+
+.hero-info {
+    font-weight: 300;
+}

@@ -1,0 +1,367 @@
+:root {
+    --orange: #FF6565;
+    --orange-transperant: #ff6565d6;
+    --white: #FFFFFF;
+    --white-transparent: #ffffff45;
+    --black: #071629;
+    --black-transperant: #0716291f;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "source sans pro";
+}
+
+.wrapper {
+    max-width: 1040px;
+    /* the reason im using 1040px as my with instead of 1000px is because i added left and right padding of 20px each it cancels out back to 1000px */
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+@media (max-width:980px) {
+    .wrapper {
+        padding-inline: 50px;
+    }
+}
+
+.text-content-container {
+    max-width: 767px;
+    margin-inline: auto;
+    text-align: center;
+    color: var(--white);
+    padding-inline: 50px;
+}
+
+@media (max-width: 580px) {
+    .text-content-container {
+        padding-inline: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content-container {
+        padding-inline: 20px;
+    }
+}
+
+button {
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    padding: 15px 35px;
+    transition: all 500ms ease-in-out;
+}
+
+button:hover {
+    background-color: var(--orange-transperant);
+    cursor: pointer;
+}
+
+/* ---------header styling------------------- */
+
+header {
+    /* background-color: var(--black); */
+    padding-block: 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.logo {
+    width: 161px;
+}
+
+header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 580px) {
+    .hamburger-menu {
+        display: unset;
+        position: absolute;
+        left: 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .wrapper {
+        justify-content: center;
+    }
+}
+
+
+header ul {
+    display: flex;
+    gap: 41px;
+    list-style-type: none;
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 500ms ease-in-out;
+}
+
+header a:hover {
+    color: var(--orange);
+}
+
+/* ------------hero section styling ---------------*/
+
+.hero {
+    background-image: url(images/headphones_hero_1.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: end;
+    padding-bottom: 100px;
+}
+
+.hero button {
+    margin-top: 40px;
+    margin-bottom: 65px;
+}
+
+@media (max-width: 580px) {
+
+    .hero {
+        padding-bottom: 50px;
+    }
+
+    .hero button {
+        margin-top: 20px;
+        margin-bottom: 45px;
+    }
+}
+
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hero .subheading {
+    font-weight: bold;
+}
+
+.hero-info {
+    font-weight: 300;
+}
+
+/* --------------------what we do styling------------------------ */
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.what-we-do {
+    padding-block: 100px;
+}
+
+.what-we-do .text-content-container {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cards-container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+@media (max-width: 980px) {
+
+    .cards-container {
+        justify-content: center;
+        row-gap: 50px;
+    }
+}
+
+.cards-container .card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 207px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card-text h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-text p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* ---------our results styling------------------- */
+
+.our-results {
+    background-image: url(images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-block: 100px;
+}
+
+.our-results .text-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.our-results .cards-container {
+    gap: 50px;
+}
+
+.our-results .card {
+    gap: 5px;
+    justify-content: center;
+    color: var(--white);
+    width: 180px;
+    height: 172px;
+}
+
+.our-results .card.pentagon {
+    background-color: var(--orange);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.our-results .card h3 {
+    font-size: 46px;
+    line-height: 46px;
+    font-weight: bold;
+}
+
+.our-results .card p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ---------contact us styling------------------- */
+
+.contact {
+    padding-block: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+}
+
+.contact h2 {
+    color: var(--black);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 335px;
+    gap: 25px;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+        padding-inline: 50px;
+    }
+}
+
+form>input {
+    width: 100%;
+    padding-block: 10px;
+    border: none;
+    outline: none;
+    color: var(--black);
+    border-bottom: 2px solid var(--black-transperant);
+}
+
+form>input::placeholder {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+form button {
+    margin-top: 40px;
+}
+
+
+/* ---------footer styling------------------- */
+
+footer {
+    background-color: var(--black);
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+footer .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+footer .logo-and-socials {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+    footer .logo-and-socials {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+}
+
+.footer-logo {
+    width: 161px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+footer .copyright {
+    font-size: 12px;
+    text-align: center;
+    color: var(--white-transparent);
+}
